@@ -1,6 +1,7 @@
 /**
  * Created by egortrubnikov on 14.10.13.
  */
+console.time("Общее время");
 /**
  * Озаглавливание первой буквы в строке
  * @return {string}
@@ -14,8 +15,7 @@ String.prototype.UpperCaseOne = function ()
  * Выбирает случайный элемент из массива и возвращает его
  * @param a
  */
-var select = function (a)
-{
+var select = function (a) {
   try {
     return a[Math.floor(a.length * Math.random())];
   } catch (e) {
@@ -46,4 +46,4 @@ var texto = function (a)
 {
   return a.toLowerCase().split("\n").join(" ").replace(/[\.,;:?!](?=\s)/g, " $& ").replace(/[\(\)\[\]]/g, "") //надоели эти скобки
     .split(" ").filter(removeVoid);
-}
+};
